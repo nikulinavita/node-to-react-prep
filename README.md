@@ -3,6 +3,7 @@
 ## Структура проекта
 
 \`\`\`text
+
 node-to-react-prep/
 ├── data/
 │   └── db.json          ← Будущая БД для SPA (образовательный контент)
@@ -11,6 +12,7 @@ node-to-react-prep/
 │   └── validator.js     ← Проверка структуры перед React-этапом
 ├── package.json         ← Скрипты автоматизации и зависимости
 └── README.md            ← Теоретический блок и Tech Stack
+
 \`\`\`
 
 ---
