@@ -1,13 +1,19 @@
-# Подготовка к React: База контента
+# ОСНОВЫ NODE.JS И NPM
 
+## Структура проекта
+
+\`\`\`text
 node-to-react-prep/
 ├── data/
-│ └── db.json ← будущая БД для SPA
+│   └── db.json          ← Будущая БД для SPA (образовательный контент)
 ├── src/
-│ ├── generator.js ← Скрипт подготовки данных
-│ └── validator.js ← Проверка структуры перед React-этапом
-├── package.json ← Скрипты автоматизации
-└── README.md ← Теоретический блок (Interview Questions)
+│   ├── generator.js     ← Скрипт генерации учебных материалов
+│   └── validator.js     ← Проверка структуры перед React-этапом
+├── package.json         ← Скрипты автоматизации и зависимости
+└── README.md            ← Теоретический блок и Tech Stack
+\`\`\`
+
+---
 
 ## Этап 4: Подготовка к интервью (Interview Corner)
 
