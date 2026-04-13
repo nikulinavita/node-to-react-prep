@@ -11,6 +11,7 @@ node-to-react-prep/
 │   └── validator.js     ← Проверка структуры
 ├── package.json         ← Скрипты
 └── README.md            ← Теоретический блок
+```
 
 ## Этап 4: Подготовка к интервью (Interview Corner)
 
