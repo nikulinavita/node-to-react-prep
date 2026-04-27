@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const validateData = () => {
   try {
-    // ПОЧЕМУ path.join? Чтобы код был универсальным для любой системы.
+    // ПОЧЕМУ path.join? Чтобы код был универсальным для любой системы. path.join так же фстрахует нас от ошибок путей на разных операционных системах (Windows vs Linux).
     const filePath = path.join(__dirname, '..', 'data', 'db.json');
     
     const rawData = fs.readFileSync(filePath, 'utf-8');
