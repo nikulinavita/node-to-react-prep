@@ -14,6 +14,8 @@ async function generateData() {
 
     const materials = [
       {
+        // ПОЧЕМУ nanoid? Эти уникальные ID критически важны для атрибута key в React. 
+        // Без них при рендеринге списков интерфейс будет «глючить» или падать при обновлении элементов.
         id: nanoid(), 
         title: 'Irregular Verbs Practice',
         topic: 'Grammar',
@@ -62,17 +64,17 @@ async function generateData() {
 
     const data = { materials };
 
-    // ПОЧЕМУ path.join? - Чтобы путь к файлу работал на любой ОС (Mac/Windows).
+    // ПОЧЕМУ path.join? Страхует от ошибок путей на разных ОС (Windows vs Linux/Mac).
     const filePath = path.join(__dirname, '..', 'data', 'db.json');
 
-    // ПОЧЕМУ fs/promises? - Чтобы использовать асинхронный await при записи файла и не блокировать работу программы.
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
+    // ПОЧЕМУ fs/promises + await? Избегаем синхронных остановок. Программа не замирает,
+    // а продолжает дышать, пока файл записывается в фоновом режиме.
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
 
     console.log(chalk.green('Success! Файл db.json успешно заполнен материалами!'));
 
   } catch (error) {
-    
-    console.log(chalk.red('Произошла ошибка:'), error);
+    console.log(chalk.red('Произошла ошибка при генерации:'), error);
   }
 }
 
